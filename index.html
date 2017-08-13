@@ -91,13 +91,43 @@
                         </div>
                     </section>
                 </section>
-                <section class="search">
+                <section class="search-hotel">
                     <h2 class="visually-hidden">Поиск гостиницы</h2>
-                    <div class="search-text">
+                    <div class="search-hotel-info">
                         <b>Заинтересовались?</b>
                         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне!</p>
                     </div>
                     <a class="btn search-btn" href="#">Поиск гостиницы в Седоне</a>
+                    <section class="search-hotel-form">
+                        <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+                        <form class="search-form" method="get" action="@">
+                            <div class="search-form-item">
+                                <label for="date-arrive">Дата заезда</label>
+                                <input type="text" name="date-arrive" id="date-arrive" placeholder="24 апреля 2017">
+                                <span class="visually-hidden calendar">Календарь</span>
+                            </div>
+                            <div class="search-form-item">
+                                <label for="date-departure">Дата выезда</label>
+                                <input type="text" name="date-departure" id="date-departure" placeholder="4 июля 2017">
+                                <span class="visually-hidden calendar">Календарь</span>
+                            </div>
+                            <fieldset class="persons">
+                                <div class="persons-number">
+                                    <label for="adults">Взрослые</label>
+                                    <button type="button" class="minus"></button>
+                                    <input type="text" name="adults" id="adults" placeholder="2">
+                                    <button type="button" class="plus"></button>
+                                </div>
+                                <div class="persons-number">
+                                    <label for="children">Дети</label>
+                                    <button type="button" class="minus"></button>
+                                    <input type="text" name="children" id="children" placeholder="0">
+                                    <button type="button" class="plus"></button>
+                                </div>
+                            </fieldset>
+                            <button class="btn search-form-btn" type="submit">Найти</button>
+                        </form>
+                    </section>
                 </section>
                 <div class="map">
                     <img src="img/map.jpg" width="1200" height="593" alt="Map">
@@ -124,35 +154,5 @@
                 </p>
             </footer>
         </div>
-        <section class="modal modal-search">
-            <h2 class="visually-hidden">Форма поиска гостиницы</h2>
-            <form class="search-form" method="get" action="@">
-                <div class="search-form-item">
-                    <label for="date-arrive">Дата заезда</label>
-                    <input type="text" name="date-arrive" id="date-arrive" placeholder="24 апреля 2017">
-                    <span class="visually-hidden calendar">Календарь</span>
-                </div>
-                <div class="search-form-item">
-                    <label for="date-departure">Дата выезда</label>
-                    <input type="text" name="date-departure" id="date-departure" placeholder="4 июля 2017">
-                    <span class="visually-hidden calendar">Календарь</span>
-                </div>
-                <div class="persons">
-                    <div class="persons-number">
-                        <label for="adults">Взрослые</label>
-                        <button type="button" class="minus"></button>
-                        <input type="text" name="adults" id="adults" placeholder="2">
-                        <button type="button" class="plus"></button>
-                    </div>
-                    <div class="persons-number">
-                        <label for="children">Дети</label>
-                        <button type="button" class="minus"></button>
-                        <input type="text" name="children" id="children" placeholder="0">
-                        <button type="button" class="plus"></button>
-                    </div>
-                </div>
-                <button class="btn search-btn" type="submit">Найти</button>
-            </form>
-        </section>
     </body>
 </html>
