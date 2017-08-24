@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Седона</title>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
@@ -98,7 +99,7 @@
                         <b>Заинтересовались?</b>
                         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне!</p>
                     </div>
-                    <a class="btn search-btn" href="#">Поиск гостиницы в Седоне</a>
+                    <button type="button" class="btn search-btn" href="#">Поиск гостиницы в Седоне</button>
                     <section class="search-hotel-form">
                         <h2 class="visually-hidden">Форма поиска гостиницы</h2>
                         <form class="search-form" method="get" action="@">
@@ -115,15 +116,23 @@
                             <fieldset class="persons">
                                 <div class="persons-number">
                                     <label for="adults">Взрослые</label>
-                                    <button type="button" class="minus"></button>
+                                    <button type="button" class="minus">
+                                        <span class="visually-hidden">Минус</span>
+                                    </button>
                                     <input type="text" name="adults" id="adults" placeholder="2">
-                                    <button type="button" class="plus"></button>
+                                    <button type="button" class="plus">
+                                        <span class="visually-hidden">Плюс</span>
+                                    </button>
                                 </div>
                                 <div class="persons-number">
                                     <label for="children">Дети</label>
-                                    <button type="button" class="minus"></button>
+                                    <button type="button" class="minus">
+                                        <span class="visually-hidden">Минус</span>
+                                    </button>
                                     <input type="text" name="children" id="children" placeholder="0">
-                                    <button type="button" class="plus"></button>
+                                    <button type="button" class="plus">
+                                        <span class="visually-hidden">Плюс</span>
+                                    </button>
                                 </div>
                             </fieldset>
                             <button class="btn search-form-btn" type="submit">Найти</button>
@@ -131,27 +140,35 @@
                     </section>
                 </section>
                 <div class="map">
-                    <img src="img/map.jpg" width="1200" height="593" alt="Map">
+                    <img src="img/map.jpg" width="1200" height="593" alt="Map Sedona">
                 </div>
             </main>
             <footer class="main-footer">
                 <div class="footer-hashtag">
-                    <span>#visitsedona</span>
+                    <a href="#">#visitsedona</a>
                 </div>
                 <ul class="footer-social">
                     <li>
-                        <a class="social-btn social-twitter-btn" href="#">Twitter</a>
+                        <a class="social-btn social-twitter-btn" href="#">
+                            <span class="visually-hidden">Twitter</span>
+                        </a>
                     </li>
                     <li>
-                        <a class="social-btn social-facebook-btn" href="#">Facebook</a>
+                        <a class="social-btn social-facebook-btn" href="#">
+                            <span class="visually-hidden">Facebook</span>
+                        </a>
                     </li>
                     <li>
-                        <a class="social-btn social-youtube-btn" href="#">Youtube</a>
+                        <a class="social-btn social-youtube-btn" href="#">
+                            <span class="visually-hidden">Youtube</span>
+                        </a>
                     </li>
                 </ul>
                 <p class="footer-copyright">
                     Website by
-                    <a class="copyright-btn" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
+                    <a class="copyright-btn" href="https://htmlacademy.ru/intensive/htmlcss">
+                        <span class="visually-hidden">html academy</span>
+                    </a>
                 </p>
             </footer>
         </div>

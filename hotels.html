@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Седона</title>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
@@ -13,10 +14,18 @@
                         <img src="img/logo-sedona.png" width="138" height="70" alt="Logo «Sedona»">
                     </a>
                     <ul class="site-navigation">
-                        <li><a href="#">Информация</a></li>
-                        <li><a href="#">Фото и видео</a></li>
-                        <li><a href="#">Карта штата</a></li>
-                        <li><a href="hotels.html">Гостиницы</a></li>
+                        <li>
+                            <a href="#">Информация</a>
+                        </li>
+                        <li>
+                            <a href="#">Фото и видео</a>
+                        </li>
+                        <li>
+                            <a href="#">Карта штата</a>
+                        </li>
+                        <li>
+                            <a href="hotels.html">Гостиницы</a>
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -99,8 +108,12 @@
                             </li>
                         </ul>
                         <div class="arrows">
-                            <a href="#" class="visually-hidden arrow arrow-up">От меньшего к большему</a>
-                            <a href="#" class="visually-hidden arrow arrow-down">От большего к меньшему</a>
+                            <a href="#" class="visually-hidden arrow arrow-up">
+                                <span class="visually-hidden">От меньшего к большему</span>
+                            </a>
+                            <a href="#" class="visually-hidden arrow arrow-down">
+                                <span class="visually-hidden">От большего к меньшему</span>
+                            </a>
                         </div>
                     </section>
                     <article class="hotel-item">
@@ -179,22 +192,30 @@
             </main>
             <footer class="main-footer">
                 <div class="footer-hashtag">
-                    <span>#visitsedona</span>
+                    <a href="#">#visitsedona</a>
                 </div>
                 <ul class="footer-social">
                     <li>
-                        <a class="social-btn social-twitter-btn" href="#">Twitter</a>
+                        <a class="social-btn social-twitter-btn" href="#">
+                            <span class="visually-hidden">Twitter</span>
+                        </a>
                     </li>
                     <li>
-                        <a class="social-btn social-facebook-btn" href="#">Facebook</a>
+                        <a class="social-btn social-facebook-btn" href="#">
+                            <span class="visually-hidden">Facebook</span>
+                        </a>
                     </li>
                     <li>
-                        <a class="social-btn social-youtube-btn" href="#">Youtube</a>
+                        <a class="social-btn social-youtube-btn" href="#">
+                            <span class="visually-hidden">Youtube</span>
+                        </a>
                     </li>
                 </ul>
                 <p class="footer-copyright">
                     Website by
-                    <a class="copyright-btn" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
+                    <a class="copyright-btn" href="https://htmlacademy.ru/intensive/htmlcss">
+                        <span class="visually-hidden">html academy</span>
+                    </a>
                 </p>
             </footer>
         </div>
