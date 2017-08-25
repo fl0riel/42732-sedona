@@ -311,12 +311,12 @@ a {
     vertical-align: middle;
 }
 
-.copyright-btn:hover,
-.copyright-btn:focus {
+.copyright-btn:hover path,
+.copyright-btn:focus path {
     fill: #81b3d2;
 }
 
-.copyright-btn:active {
+.copyright-btn:active path {
     fill: #bdbbbc;
 }
 
@@ -328,6 +328,7 @@ a {
     background-position: 0 0;
     background-repeat: no-repeat;
 }
+
 .filter fieldset {
     border: none;
 }
@@ -439,20 +440,20 @@ a {
 }
 
 
-.arrow svg {
+.arrow path {
     fill: #cacaca;
 }
 
-.arrow .arrow-active {
+.arrow .arrow-active path {
     fill: #81b3d2;
 }
 
-.arrow:hover,
-.arrow:focus {
+.arrow:hover path,
+.arrow:focus path {
     fill: #000000;
 }
 
-.arrow:active {
+.arrow:active path {
     fill: #81b3d2;
 }
 
