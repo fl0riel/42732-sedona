@@ -1,3 +1,13 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
+.content-box-component {
+    box-sizing: content-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -202,6 +212,7 @@ a {
     fill: #cacaca;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .search-form-dates .calendar:hover,
@@ -285,10 +296,25 @@ a {
     outline: none;
 }
 
-.social-btn svg {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 15px;
+.social-twitter-btn {
+    background-color: #81b3d2;
+    background-image: url(../img/social/twitter.svg);
+    background-position: 15px 15px;
+    background-repeat: no-repeat;
+}
+
+.social-facebook-btn {
+    background-color: #81b3d2;
+    background-image: url(../img/social/fb-icon.svg);
+    background-position: 17px 13px;
+    background-repeat: no-repeat;
+}
+
+.social-youtube-btn {
+    background-color: #81b3d2;
+    background-image: url(../img/social/youtube.svg);
+    background-position: 14px 15px;
+    background-repeat: no-repeat;
 }
 
 .social-btn:hover,
