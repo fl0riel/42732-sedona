@@ -102,10 +102,7 @@ a {
 
 .intro {
     position: relative;
-    background-color: #81b3d2;
-    background-image: url(../img/index-bg-1.jpg);
-    background-position: 0 0;
-    background-repeat: no-repeat;
+    background: #81b3d2 url(../img/index-bg-1.jpg) 0 0 no-repeat;
     padding-top: 1px;
     padding-bottom: 1px;
 }
@@ -117,9 +114,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../img/index-bg-2.png);
-    background-position: bottom left;
-    background-repeat: no-repeat;
+    background: url(../img/index-bg-2.png) bottom left no-repeat;
 }
 
 .intro img {
@@ -192,8 +187,7 @@ a {
 }
 
 .search-btn:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #503e33;
+    opacity: 0.3;
 }
 
 .search-form {
@@ -297,24 +291,15 @@ a {
 }
 
 .social-twitter-btn {
-    background-color: #81b3d2;
-    background-image: url(../img/social/twitter.svg);
-    background-position: 15px 15px;
-    background-repeat: no-repeat;
+    background: url(../img/social/twitter.svg) 15px 15px no-repeat;
 }
 
 .social-facebook-btn {
-    background-color: #81b3d2;
-    background-image: url(../img/social/fb-icon.svg);
-    background-position: 17px 13px;
-    background-repeat: no-repeat;
+    background: url(../img/social/fb-icon.svg) 17px 13px no-repeat;
 }
 
 .social-youtube-btn {
-    background-color: #81b3d2;
-    background-image: url(../img/social/youtube.svg);
-    background-position: 14px 15px;
-    background-repeat: no-repeat;
+    background: url(../img/social/youtube.svg) 14px 15px no-repeat;
 }
 
 .social-btn:hover,
@@ -323,13 +308,13 @@ a {
 }
 
 .social-btn:active {
-    fill: rgba(255, 255, 255, 0.3);
     background-color: #5496bd;
 }
 
 .copyright-btn {
     display: inline-block;
     vertical-align: middle;
+    outline: none;
 }
 .copyright-btn svg {
     width: 115px;
@@ -343,16 +328,13 @@ a {
 }
 
 .copyright-btn:active path {
-    fill: #bdbbbc;
+    opacity: 0.3;
 }
 
 /*Стилизация внутренней страницы - отели*/
 .filters {
     color: #ffffff;
-    background-color: #81b3d2;
-    background-image: url(../img/filter-bg.jpg);
-    background-position: 0 0;
-    background-repeat: no-repeat;
+    background: #81b3d2 url(../img/filter-bg.jpg) 0 0 no-repeat;
 }
 
 .filter fieldset {
@@ -373,6 +355,14 @@ a {
     margin: 0;
 }
 
+.filter-option label{
+    cursor: pointer;
+}
+
+.filter-option .filter-input:focus + label {
+    outline: auto;
+}
+
 .price-value {
     border: 2px solid #ffffff;
 }
@@ -388,8 +378,7 @@ a {
 }
 
 .price-value input[type=text]:focus {
-    outline: none;
-    box-shadow: inset 0 0 2px 0 #ffffff;
+    outline: auto;
 }
 
 .price-value input::-webkit-input-placeholder {
@@ -414,7 +403,8 @@ a {
     border: 2px solid #ffffff;
 }
 
-.filters-btn:hover {
+.filters-btn:hover,
+.filters-btn:focus {
     color: #000000;
     background-color: #ffffff;
 }
@@ -449,6 +439,7 @@ a {
 }
 
 .sorting-type .sorting-item {
+    outline: none;
     color: rgba(0, 0, 0, 0.3);
     text-decoration: underline;
     text-decoration-color: #81b3d2;
@@ -465,12 +456,15 @@ a {
     text-decoration: none;
 }
 
+.arrow {
+    outline: none;
+}
 
 .arrow path {
     fill: #cacaca;
 }
 
-.arrow .arrow-active path {
+.arrow-active path {
     fill: #81b3d2;
 }
 
@@ -496,6 +490,7 @@ a {
     line-height: 26px;
     font-weight: 700;
     color: #000000;
+    outline: none;
 }
 
 .hotel-title a:hover,
@@ -524,10 +519,6 @@ a {
     background-color: #669ec0;
 }
 
-.hotel-info-buttons .more-btn:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #5496bd;
-}
 
 .hotel-info-buttons .reservation-btn {
     background-color: #766357;
@@ -538,9 +529,9 @@ a {
     background-color: #604e43;
 }
 
+.hotel-info-buttons .more-btn:active,
 .hotel-info-buttons .reservation-btn:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #503e33;
+    opacity: 0.3;
 }
 
 .rating-stars {
