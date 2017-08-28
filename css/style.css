@@ -62,20 +62,62 @@ a {
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
     width: 1200px;
     margin: 0 auto;
+    box-shadow: 0 0 30px 5px rgba(0,0,0,0.3);
 }
 
 /*Стилизация главной страницы*/
 .main-navigation {
+    position: relative;
     color: #000000;
     background-color: #ffffff;
 }
 
+.main-navigation .main-header-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 138px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+
 .site-navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
     list-style: none;
-    padding: 0;
+    padding: 0 6%;
     margin: 0;
+}
+
+.site-navigation li {
+    flex-basis: 25%;
+    margin: 15px 0;
+}
+
+/*.site-navigation li:first-child,*/
+/*.site-navigation li:nth-child(4n+1) {*/
+    /*margin-left: 6%;*/
+/*}*/
+
+/*.site-navigation li:last-child,*/
+/*.site-navigation li:nth-child(4n) {*/
+    /*margin-right: 6%;*/
+/*}*/
+
+.site-navigation li:nth-child(4n),
+.site-navigation li:nth-child(4n+3) {
+    text-align: right;
 }
 
 .site-navigation a {
@@ -100,39 +142,52 @@ a {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.intro {
-    position: relative;
-    background: #81b3d2 url(../img/index-bg-1.jpg) 0 0 no-repeat;
-    padding-top: 1px;
-    padding-bottom: 1px;
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
-.intro::before {
+.intro {
+    display: flex;
+    background: #81b3d2 url(../img/index-bg-1.jpg) 0 -50px no-repeat;
+    padding-top: 1px;
+}
+
+.intro .mask {
+    position: relative;
+}
+
+.intro .mask::before {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: 1200px;
+    height: 57px;
     background: url(../img/index-bg-2.png) bottom left no-repeat;
 }
 
 .intro img {
-    display: block;
+    align-self: center;
     width: 458px;
     height: 352px;
-    margin: 80px auto 85px auto;
+    margin: 80px auto 75px auto;
 }
 
 .reasons {
     text-align: center;
 }
 
-.reasons p {
+.reasons-info {
+    margin: 60px 0 56px;
+}
+
+.reasons-info p {
     line-height: 26px;
 }
 
-.reasons .reasons-slogan {
+.reasons-info .reasons-slogan {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     font-weight: 700;
@@ -146,19 +201,49 @@ a {
     font-weight: 700;
 }
 
+.reason-info .reason-number {
+    display: block;
+    margin-bottom: 20px;
+}
+
 .reason .reason-info-white {
+    display: flex;
     color: #ffffff;
     background-color: #81b3d2;
 }
 
+.reason .reason-info {
+    flex-basis: 33.33%;
+    padding: 25px 60px 60px;
+}
+
+.reason-info-white .reason-photo {
+    max-height: 256px;
+    flex-basis: 66.66%;
+    align-self: center;
+}
+
 .features .features-list {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+.features-list .feature-item {
+    max-width: 33.33%;
+    padding: 50px;
+}
+
 .several-reasons {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #eeeeee;
+}
+
+.several-reasons .reason-info {
+    flex-basis: 33.33%;
 }
 
 .search-hotel {
@@ -167,6 +252,7 @@ a {
 
 .search-hotel-info {
     line-height: 24px;
+    margin: 60px 0;
 }
 
 .search-hotel-info b {
@@ -178,6 +264,8 @@ a {
 }
 
 .search-hotel .search-btn {
+    max-width: 570px;
+    padding: 30px 140px;
     background-color: #766357;
 }
 
@@ -187,22 +275,88 @@ a {
 }
 
 .search-btn:active {
-    opacity: 0.3;
+    background-color: #604e43;
+}
+
+.search-hotel-form {
+    position: relative;
+}
+
+.search-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 570px;
+    margin: 0 auto;
 }
 
 .search-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: start;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 0 55px;
+}
+
+.search-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.search-form label {
+    width: 33.33%;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.search-form input[type=text] {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
     color: #000000;
-}
-
-.search-form fieldset {
+    background-color: #f2f2f2;
     border: none;
 }
 
+.search-form .search-form-item {
+    display: flex;
+    position: relative;
+    margin: 30px 0;
+}
+
+.search-form-item input[type=text] {
+    width: 66.66%;
+    padding: 10px 15px;
+}
+
+.search-form input[type=text]:hover {
+    background-color: #ebebeb;
+}
+
+.search-form input[type=text]:focus {
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: inset 0 0 5px 0 #e5e5e5;
+}
+
+.search-form-dates {
+
+}
+
 .search-form-dates .calendar {
+    position: absolute;
+    right: 5px;
+    bottom: 6px;
     fill: #cacaca;
     background-color: transparent;
     border: none;
@@ -219,24 +373,8 @@ a {
     fill: #81b3d2;
 }
 
-.search-form input[type=text] {
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: 700;
-    color: #000000;
-    background-color: #f2f2f2;
-    border: none;
-}
-
-.search-form input[type=text]:hover {
-    background-color: #ebebeb;
-}
-
-.search-form input[type=text]:focus {
-    background-color: #ffffff;
-    outline: none;
-    box-shadow: inset 0 0 2px 0 #e5e5e5;
+.persons .persons-number {
+    display: flex;
 }
 
 .search-form .persons-btn {
@@ -267,18 +405,46 @@ a {
     color:#000000;
 }
 
+.search-form .search-form-btn {
+    width: 100%;
+    padding: 20px;
+    margin: 55px 0;
+}
+
+.main-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 120px;
+}
+
+.main-footer section {
+    display: flex;
+    flex-basis: 33.33%;
+    margin: 40px 0;
+}
+
 .footer-hashtag a {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
     color: #000000;
 }
 
+.footer-hashtag a,
+.footer-copyright p {
+    margin: auto;
+}
+
 .footer-social {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: auto;
 }
 
 .footer-social .social-btn {
