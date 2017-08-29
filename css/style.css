@@ -22,7 +22,6 @@ body {
 
 a {
     text-decoration: none;
-    cursor: pointer;
 }
 
 .btn {
@@ -139,7 +138,7 @@ a {
 
 .intro {
     display: flex;
-    background: #81b3d2 url(../img/index-bg-1.jpg) 0 -50px no-repeat;
+    background: url(../img/index-bg-1.jpg) 0 -50px no-repeat #81b3d2;
     background-size: cover;
     padding-top: 1px;
 }
@@ -487,7 +486,7 @@ a {
 /*Стилизация внутренней страницы - отели*/
 .filters {
     color: #ffffff;
-    background: #81b3d2 url(../img/filter-bg.jpg) center no-repeat;
+    background: url(../img/filter-bg.jpg) center no-repeat #81b3d2;
     background-size: cover;
 }
 
