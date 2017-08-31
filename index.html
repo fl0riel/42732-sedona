@@ -39,7 +39,7 @@
                 <section class="reasons">
                     <h2 class="visually-hidden">Причины</h2>
                     <div class="reasons-info">
-                        <p class="reasons-slogan">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</p>
+                        <p class="reasons-slogan">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
                         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
                     </div>
                     <section class="reason">
@@ -108,7 +108,7 @@
                     <h2 class="visually-hidden">Поиск гостиницы</h2>
                     <div class="search-hotel-info">
                         <b>Заинтересовались?</b>
-                        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне!</p>
+                        <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне!</p>
                     </div>
                     <button class="btn search-btn" type="button">Поиск гостиницы в Седоне</button>
                     <section class="search-hotel-form">
@@ -134,17 +134,31 @@
                                     </div>
                                 </fieldset>
                                 <fieldset class="persons">
-                                    <div class="persons-number">
-                                        <label for="adults">Взрослые:</label>
-                                        <input class="btn persons-btn" type="button" value="-">
-                                        <input type="text" name="adults" id="adults" placeholder="2" required>
-                                        <input class="btn persons-btn" type="button" value="+">
-                                    </div>
-                                    <div class="persons-number">
-                                        <label for="children">Дети:</label>
-                                        <input class="btn persons-btn" type="button" value="-">
-                                        <input type="text" name="children" id="children" placeholder="0">
-                                        <input class="btn persons-btn" type="button" value="+">
+                                    <div class="persons-wrapper">
+                                        <div class="persons-number">
+                                            <label for="adults">Взрослые:</label>
+                                            <div class="persons-wrapper">
+                                                <button class="btn persons-btn" type="button">-
+                                                    <span class="visually-hidden">Меньше</span>
+                                                </button>
+                                                <input type="text" name="adults" id="adults" placeholder="2" required>
+                                                <button class="btn persons-btn" type="button">+
+                                                    <span class="visually-hidden">Больше</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="persons-number">
+                                            <label for="children">Дети:</label>
+                                            <div class="persons-wrapper">
+                                                <button class="btn persons-btn" type="button">-
+                                                    <span class="visually-hidden">Меньше</span>
+                                                </button>
+                                                <input type="text" name="children" id="children" placeholder="0">
+                                                <button class="btn persons-btn" type="button">+
+                                                    <span class="visually-hidden">Больше</span>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </fieldset>
                                 <button class="btn search-form-btn" type="submit">Найти</button>
@@ -156,7 +170,7 @@
                     <img src="img/map.jpg" width="1200" height="593" alt="Map Sedona">
                 </div>
             </main>
-            <footer class="main-footer">
+            <footer class="main-footer index-main-footer">
                 <section class="footer-hashtag">
                     <h2 class="visually-hidden">Хэштег Седона</h2>
                     <a href="#">#visitsedona</a>
