@@ -67,7 +67,7 @@ a {
     width: 1200px;
     margin: 0 auto;
     background-color: #ffffff;
-    box-shadow: 0 0 15px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
 }
 
 /*Стилизация главной страницы*/
@@ -108,6 +108,11 @@ a {
 
 .site-navigation li:nth-child(2) {
     margin-right: 20%;
+    padding-left: 30px;
+}
+
+.site-navigation li:nth-child(3) {
+    padding-right: 32px;
 }
 
 .site-navigation li:nth-child(3),
@@ -152,29 +157,34 @@ a {
     display: flex;
     background: url(../img/index-bg-1.jpg) 0 -56px no-repeat #81b3d2;
     background-size: cover;
-    padding-top: 1px;
 }
 
 .intro .mask {
     position: relative;
+    width: 1200px;
+    padding: 254px 0;
 }
 
 .intro .mask::before {
     content: "";
     position: absolute;
+    bottom: 80px;
+    left: 370px;
+    display: block;
+    width: 458px;
+    height: 352px;
+    background: url("../img/welcome.png") center top no-repeat;
+}
+
+.intro .mask::after {
+    content: "";
+    position: absolute;
     bottom: 0;
     left: 0;
     display: block;
-    width: 1200px;
+    width: 100%;
     height: 57px;
     background: url(../img/index-bg-2.png) bottom left no-repeat;
-}
-
-.intro img {
-    align-self: center;
-    width: 458px;
-    height: 352px;
-    margin: 75px auto 80px auto;
 }
 
 .reasons {
@@ -205,12 +215,12 @@ a {
     font-size: 21px;
     line-height: 21px;
     font-weight: 700;
-    margin: 20px auto;
+    margin: 22px auto;
 }
 
 .reason-info .reason-number {
     display: block;
-    margin-bottom: 20px;
+    margin: 21px 0;
 }
 
 .reason .reason-info-white {
@@ -221,7 +231,16 @@ a {
 
 .reason .reason-info {
     flex-basis: 33.33%;
-    padding: 27px 60px 50px;
+    padding: 27px 60px 45px;
+}
+
+.reason-info-white .reason-info-bridge {
+    padding-right: 45px;
+    padding-left: 45px;
+}
+
+.reason-info-bridge .reasons-title {
+    margin: 20px auto 22px auto;
 }
 
 .reason-info-white .reason-photo {
@@ -235,12 +254,43 @@ a {
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 20px 0;
 }
 
 .features-list .feature-item {
+    position: relative;
     max-width: 33.33%;
-    padding: 50px;
+    padding: 140px 50px 50px 50px;
+}
+
+.feature-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 75px;
+    height: 72px;
+}
+
+.feature-item:nth-of-type(1)::before {
+    top: 61px;
+    left: 162px;
+    background: url("../img/icon-1.svg") 0 0 no-repeat;
+}
+
+.feature-item:nth-of-type(2)::before {
+    top: 62px;
+    left: 158px;
+    background: url("../img/icon-2.svg") 0 0 no-repeat;
+}
+
+.feature-item:nth-of-type(3)::before {
+    width: 64px;
+    height: 76px;
+    top: 57px;
+    left: 167px;
+    background: url("../img/icon-3.svg") 0 0 no-repeat;
 }
 
 .several-reasons {
@@ -260,7 +310,7 @@ a {
 
 .search-hotel-info {
     line-height: 24px;
-    margin: 60px 0;
+    margin: 48px 0;
 }
 
 .search-hotel-info b {
@@ -271,10 +321,14 @@ a {
     color: #000000;
 }
 
+.search-hotel-info p {
+    margin: 25px 0;
+}
+
 .search-hotel .search-btn {
     max-width: 570px;
-    padding: 30px 140px;
     background-color: #766357;
+    padding: 30px 140px;
 }
 
 .search-btn:hover,
@@ -297,6 +351,7 @@ a {
     right: 0;
     max-width: 570px;
     margin: 0 auto;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
 }
 
 .search-form {
@@ -310,20 +365,11 @@ a {
     text-align: start;
     color: #000000;
     background-color: #ffffff;
-    padding: 0 55px;
-}
-
-.search-form fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
-
+    padding: 55px;
 }
 
 .search-form label {
-    width: 20%;
-    padding: 10px 0;
-    margin-right: 5%;
+    padding: 5px 0;
     cursor: pointer;
 }
 
@@ -338,14 +384,15 @@ a {
 }
 
 .search-form .search-form-item {
-    display: flex;
     position: relative;
-    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .search-form-item input {
-    width: 75%;
-    padding: 10px 15px;
+    width: 346px;
+    padding: 5px 10px;
 }
 
 .search-form input[type=text]:hover {
@@ -358,31 +405,36 @@ a {
     box-shadow: inset 0 0 5px 0 #e5e5e5;
 }
 
-.search-form-dates .calendar {
+.search-form-item .calendar {
     position: absolute;
-    right: 5px;
-    bottom: 6px;
+    right: 4px;
+    bottom: 0;
     fill: #cacaca;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.search-form-dates .calendar:hover,
-.search-form-dates .calendar:focus {
+.search-form-item .calendar:hover,
+.search-form-item .calendar:focus {
     fill: #000000;
     outline: none;
 }
 
-.search-form-dates .calendar:active {
+.search-form-item .calendar:active {
     fill: #81b3d2;
 }
 
-.persons .persons-wrapper {
+.persons {
+    margin: 3px 0 30px 0;
+}
+
+.persons,
+.persons-wrapper {
     display: flex;
 }
 
-.persons .persons-number {
+.persons-number {
     display: flex;
     flex-basis: 50%;
     justify-content: space-between;
@@ -395,13 +447,9 @@ a {
     text-align: center;
 }
 
-.persons .persons-number:nth-child(2) {
+.persons-number:nth-of-type(2) {
     flex-basis: 40%;
-    margin-left: 10%;
-}
-
-.persons-number label {
-    width: 100%;
+    margin-left: 50px;
 }
 
 .search-form .persons-btn {
@@ -435,22 +483,29 @@ a {
     color:#000000;
 }
 
-.search-form input:focus::-webkit-input-placeholder {
+/*Исчезновение плейсхолдера при фокусе*/
+
+input[type=text]:focus::-webkit-input-placeholder {
     opacity: 0;
 }
 
-.search-form input:focus::-moz-placeholder {
+input[type=text]:focus::-moz-placeholder {
     opacity: 0;
 }
 
-.search-form input:focus:-ms-input-placeholder {
+input[type=text]:focus:-ms-input-placeholder {
     opacity: 0;
 }
 
 .search-form .search-form-btn {
+    padding: 16px;
+    margin-top: 24px;
+}
+
+.map {
     width: 100%;
-    padding: 20px;
-    margin: 55px 0;
+    height: 593px;
+    background: url("../img/map.jpg") 0 0 no-repeat;
 }
 
 .main-footer {
@@ -473,7 +528,7 @@ a {
 .main-footer section {
     display: flex;
     flex-basis: 33.33%;
-    margin: 40px 0;
+    margin: 38px 0 42px 0;
 }
 
 .footer-hashtag a {
@@ -497,6 +552,10 @@ a {
     list-style: none;
     padding: 0;
     margin: auto;
+}
+
+.footer-social li {
+    margin-right: 5px;
 }
 
 .footer-social .social-btn {
@@ -640,15 +699,27 @@ a {
     display: flex;
     width: 320px;
     list-style: none;
-    padding: 0;
-    margin: 0;
     border: 2px solid #ffffff;
-    border-radius: 5px;
+    border-radius: 3px;
+    padding: 0;
+    margin: 0 0 30px 0;
 }
 
 .price-value-list li {
+    position: relative;
     width: 100%;
     padding: 5px 0 5px 50px;
+}
+
+.price-value-list li:nth-of-type(1)::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+    display: block;
+    width: 2px;
+    height: 18px;
+    background-color: #ffffff;
 }
 
 .price-value-list label {
@@ -683,6 +754,42 @@ a {
     color:#ffffff;
 }
 
+.price-value .range-controls {
+    position: relative;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.range-controls .controller {
+    position:absolute;
+    top: -10px;
+    left: 0;
+    display: block;
+    width: 20px;
+    height: 22px;
+    background: url("../img/filter-btn.svg") 0 0 no-repeat;
+    cursor: pointer;
+}
+
+.range-controls .controller-max {
+    left: 80%;
+}
+
+.range-controls .controller:hover {
+    width: 22px;
+    height: 24px;
+    background-size: cover;
+}
+
 .filters-btn {
     display: block;
     font-family: "PT Sans", "Arial", sans-serif;
@@ -694,7 +801,7 @@ a {
     padding: 5px 35px;
     margin: 20px auto;
     border: 2px solid #ffffff;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .filters-btn:hover,
@@ -858,12 +965,8 @@ a {
     justify-content: space-between;
 }
 
-.hotel-info-text span {
-    margin-bottom: 5px;
-}
-
 .hotel-info-text .hotel-info-price {
-    margin-right: 30%;
+    margin-right: 29%;
 }
 
 .hotel-info-buttons .btn {
@@ -872,11 +975,12 @@ a {
     line-height: 21px;
     font-weight: 700;
     color: #ffffff;
-    padding: 5px 15px;
+    padding: 3px 17px;
 }
 
 .hotel-info-buttons .more-btn {
     background-color: #81b3d2;
+    margin-right: 5px;
 }
 
 .hotel-info-buttons .more-btn:hover,
@@ -911,6 +1015,12 @@ a {
     list-style: none;
     padding: 0;
     margin: 0 0 35px 0;
+}
+
+.rating-stars .rating-star {
+    width: 18px;
+    height: 17px;
+    background: url("../img/star.svg") 0 0 no-repeat;
 }
 
 .rating-number {
