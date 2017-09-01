@@ -102,7 +102,7 @@ a {
 }
 
 .site-navigation li {
-    flex-basis: 20%;
+    width: 20%;
     margin: 15px 0;
 }
 
@@ -161,30 +161,25 @@ a {
 
 .intro .mask {
     position: relative;
-    width: 1200px;
-    padding: 254px 0;
 }
+
 
 .intro .mask::before {
-    content: "";
-    position: absolute;
-    bottom: 80px;
-    left: 370px;
-    display: block;
-    width: 458px;
-    height: 352px;
-    background: url("../img/welcome.png") center top no-repeat;
-}
-
-.intro .mask::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     display: block;
-    width: 100%;
+    width: 1200px;
     height: 57px;
     background: url(../img/index-bg-2.png) bottom left no-repeat;
+}
+
+.intro img {
+    align-self: center;
+    width: 458px;
+    height: 352px;
+    margin: 80px auto 75px auto;
 }
 
 .reasons {
@@ -230,7 +225,7 @@ a {
 }
 
 .reason .reason-info {
-    flex-basis: 33.33%;
+    width: 33.33%;
     padding: 27px 60px 45px;
 }
 
@@ -244,8 +239,9 @@ a {
 }
 
 .reason-info-white .reason-photo {
+    max-width: 800px;
     max-height: 256px;
-    flex-basis: 66.66%;
+    width: 66.66%;
     align-self: center;
 }
 
@@ -300,7 +296,7 @@ a {
 }
 
 .several-reasons .reason-info {
-    flex-basis: 33.33%;
+    width: 33.33%;
 }
 
 .search-hotel {
@@ -342,6 +338,8 @@ a {
 
 .search-hotel-form {
     position: relative;
+    width: 570px;
+    margin: 0 auto;
 }
 
 .search-wrapper {
@@ -408,7 +406,7 @@ a {
 .search-form-item .calendar {
     position: absolute;
     right: 4px;
-    bottom: 0;
+    bottom: 4px;
     fill: #cacaca;
     background-color: transparent;
     border: none;
@@ -436,7 +434,7 @@ a {
 
 .persons-number {
     display: flex;
-    flex-basis: 50%;
+    width: 50%;
     justify-content: space-between;
     align-content: center;
 }
@@ -448,7 +446,7 @@ a {
 }
 
 .persons-number:nth-of-type(2) {
-    flex-basis: 40%;
+    width: 40%;
     margin-left: 50px;
 }
 
@@ -527,7 +525,7 @@ input[type=text]:focus:-ms-input-placeholder {
 
 .main-footer section {
     display: flex;
-    flex-basis: 33.33%;
+    width: 33.33%;
     margin: 38px 0 42px 0;
 }
 
@@ -623,9 +621,9 @@ input[type=text]:focus:-ms-input-placeholder {
 
 
 .filter fieldset {
+    border: none;
     padding: 0;
     margin: 0;
-    border: none;
 }
 
 .filter .filter-services {
@@ -798,10 +796,10 @@ input[type=text]:focus:-ms-input-placeholder {
     font-weight: 400;
     color: #ffffff;
     background-color: transparent;
-    padding: 5px 35px;
-    margin: 20px auto;
     border: 2px solid #ffffff;
     border-radius: 3px;
+    padding: 5px 35px;
+    margin: 20px auto;
 }
 
 .filters-btn:hover,
@@ -922,8 +920,8 @@ input[type=text]:focus:-ms-input-placeholder {
 
 .hotel-item {
     display: flex;
-    padding: 30px 6%;
     border-top: 1px solid #e5e5e5;
+    padding: 30px 6%;
 }
 .hotel-item:last-child {
     border-bottom: 1px solid #e5e5e5;
