@@ -268,7 +268,6 @@ input[type=text]:focus:-ms-input-placeholder {
     max-width: 800px;
     max-height: 256px;
     width: 66.66%;
-    align-self: center;
 }
 
 .features .features-list {
@@ -361,7 +360,7 @@ input[type=text]:focus:-ms-input-placeholder {
 }
 
 .search-hotel .search-btn {
-    max-width: 570px;
+    max-width: 575px;
     padding: 30px 140px;
 }
 
@@ -378,10 +377,9 @@ input[type=text]:focus:-ms-input-placeholder {
     right: 0;
     max-width: 570px;
     margin: 0 auto;
-    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
 }
 
-.search-wrapper .search-form {
+.search-form-visible {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -393,14 +391,19 @@ input[type=text]:focus:-ms-input-placeholder {
     color: #000000;
     background-color: #ffffff;
     padding: 55px;
+    box-shadow: 0 0 15px 2px rgba(0,0,0,0.2);
 }
 
-.search-form label {
+.search-form-hidden {
+    display: none;
+}
+
+.search-form-visible label {
     padding: 5px 0;
     cursor: pointer;
 }
 
-.search-form input {
+.search-form-visible input {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 26px;
@@ -410,7 +413,7 @@ input[type=text]:focus:-ms-input-placeholder {
     border: none;
 }
 
-.search-form .search-form-item {
+.search-form-visible .search-form-item {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -419,26 +422,28 @@ input[type=text]:focus:-ms-input-placeholder {
 
 .search-form-item input {
     width: 346px;
-    padding: 5px 10px;
+    padding: 5px 40px 5px 10px;
 }
 
-.search-form input[type=text]:hover {
+.search-form-visible input[type=text]:hover {
     background-color: #ebebeb;
 }
 
-.search-form input[type=text]:focus {
+.search-form-visible input[type=text]:focus {
     background-color: #ffffff;
     outline: none;
-    box-shadow: inset 0 0 5px 0 #e5e5e5;
+    box-shadow: inset 0 0 0 1px #e5e5e5;
 }
 
 .search-form-item .calendar {
     position: absolute;
-    right: 4px;
-    bottom: 1px;
+    right: 0;
+    bottom: 0;
     fill: #cacaca;
     background-color: transparent;
     border: none;
+    margin-right: 4px;
+    margin-bottom: 1px;
     cursor: pointer;
 }
 
@@ -479,37 +484,37 @@ input[type=text]:focus:-ms-input-placeholder {
     margin-left: 50px;
 }
 
-.search-form .persons-btn {
+.search-form-visible .persons-btn {
     width: 38px;
     height: 38px;
     color: #cacaca;
     background-color: #f2f2f2;
 }
 
-.search-form .persons-btn:hover,
-.search-form .persons-btn:focus {
+.search-form-visible .persons-btn:hover,
+.search-form-visible .persons-btn:focus {
     color: #000000;
     outline: none;
 }
 
-.search-form .persons-btn:active {
+.search-form-visible .persons-btn:active {
     color: #81b3d2;
 }
 
-.search-form input::-webkit-input-placeholder {
+.search-form-visible input::-webkit-input-placeholder {
     color:#000000;
 }
 
-.search-form input::-moz-placeholder {
+.search-form-visible input::-moz-placeholder {
     color:#000000;
     opacity: 1;
 }
 
-.search-form input:-ms-input-placeholder {
+.search-form-visible input:-ms-input-placeholder {
     color:#000000;
 }
 
-.search-form .search-form-btn {
+.search-form-visible .search-form-btn {
     padding: 16px;
     margin-top: 24px;
 }
@@ -639,13 +644,14 @@ input[type=text]:focus:-ms-input-placeholder {
     vertical-align: middle;
 }
 
-.copyright-btn:hover path,
-.copyright-btn:focus path {
+.copyright-btn:hover svg,
+.copyright-btn:focus svg {
     fill: #81b3d2;
 }
 
-.copyright-btn:active path {
-    fill: #bdbbbc;
+.copyright-btn:active svg {
+    fill: #000000;
+    opacity: 0.3;
 }
 
 /*Стилизация внутренней страницы - отели*/
@@ -791,6 +797,7 @@ input[type=text]:focus:-ms-input-placeholder {
     color: #ffffff;
     background-color: transparent;
     border: none;
+    padding-right: 10px;
 }
 
 .price-value input[type=text]:focus {
@@ -961,20 +968,20 @@ input[type=text]:focus:-ms-input-placeholder {
     outline: none;
 }
 
-.arrow path {
+.arrow svg {
     fill: #cacaca;
 }
 
-.arrow-active path {
+.arrow-active svg {
     fill: #81b3d2;
 }
 
-.arrow:hover path,
-.arrow:focus path {
+.arrow:hover svg,
+.arrow:focus svg {
     fill: #000000;
 }
 
-.arrow:active path {
+.arrow:active svg {
     fill: #81b3d2;
 }
 
@@ -1024,11 +1031,11 @@ input[type=text]:focus:-ms-input-placeholder {
 .hotel-info .hotel-info-buttons{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
-.hotel-info-text .hotel-info-price {
-    margin-right: 30%;
+.hotel-info-text span {
+    min-width: 110px;
+    margin-right: 6px;
 }
 
 .hotel-info-buttons .btn {
