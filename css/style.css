@@ -520,6 +520,10 @@ input[type=text]:focus:-ms-input-placeholder {
     background: url("../img/map.jpg") 0 0 no-repeat;
 }
 
+.map iframe {
+    border: none;
+}
+
 .main-footer {
     position: relative;
     display: flex;
@@ -913,12 +917,12 @@ input[type=text]:focus:-ms-input-placeholder {
     margin: 0;
 }
 
-.sorting-list-active a {
+.sorting-list-active .sorting-item {
     color: #81b3d2;
     text-decoration: none;
 }
 
-.sorting-list .sorting-item {
+.sorting-list a {
     outline: none;
     color: rgba(0, 0, 0, 0.3);
     text-decoration: underline;
@@ -926,12 +930,12 @@ input[type=text]:focus:-ms-input-placeholder {
     text-decoration-style: dotted;
 }
 
-.sorting-list .sorting-item:hover,
-.sorting-list .sorting-item:focus {
+.sorting-list a:hover,
+.sorting-list a:focus {
     color: #81b3d2;
 }
 
-.sorting-list .sorting-item:active {
+.sorting-list a:active {
     color: #000000;
     text-decoration: none;
 }
