@@ -24,6 +24,28 @@ a {
     text-decoration: none;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+}
+
+/*Общие стили для кнопок*/
 .btn {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
@@ -49,25 +71,30 @@ a {
     background-color: #5496bd;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0,0,0,0);
-    overflow: hidden;
+.brown-btn {
+    background-color: #766357;
 }
 
-.wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 1200px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+.brown-btn:hover,
+.brown-btn:focus {
+    background-color: #604e43;
+}
+
+.brown-btn:active {
+    background-color: #503e33;
+}
+
+/*Исчезновение плейсхолдера при фокусе*/
+input[type=text]:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+input[type=text]:focus::-moz-placeholder {
+    opacity: 0;
+}
+
+input[type=text]:focus:-ms-input-placeholder {
+    opacity: 0;
 }
 
 /*Стилизация главной страницы*/
@@ -90,8 +117,7 @@ a {
     margin: 0 auto;
 }
 
-
-.site-navigation {
+.main-navigation .site-navigation {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -134,7 +160,7 @@ a {
     color: #000000;
 }
 
-.site-navigation .active a {
+.site-navigation-active a {
     color: #766357;
 }
 
@@ -187,7 +213,7 @@ a {
     background-color: #ffffff;
 }
 
-.reasons-info {
+.reasons .reasons-info {
     max-width: 50%;
     margin: 60px auto 50px auto;
 }
@@ -293,7 +319,7 @@ a {
     margin: 24px auto;
 }
 
-.several-reasons {
+.reasons .several-reasons {
     display: flex;
     flex-wrap: wrap;
     background-color: #eeeeee;
@@ -317,7 +343,7 @@ a {
     background-color: #ffffff;
 }
 
-.search-hotel-info {
+.search-hotel .search-hotel-info {
     line-height: 24px;
     margin: 51px 0 47px;
 }
@@ -336,26 +362,16 @@ a {
 
 .search-hotel .search-btn {
     max-width: 570px;
-    background-color: #766357;
     padding: 30px 140px;
 }
 
-.search-btn:hover,
-.search-btn:focus {
-    background-color:  #604e43;
-}
-
-.search-btn:active {
-    background-color: #604e43;
-}
-
-.search-hotel-form {
+.search-hotel .search-hotel-form {
     position: relative;
     width: 570px;
     margin: 0 auto;
 }
 
-.search-wrapper {
+.search-hotel-form .search-wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -365,7 +381,7 @@ a {
     box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
 }
 
-.search-form {
+.search-wrapper .search-form {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -480,7 +496,6 @@ a {
     color: #81b3d2;
 }
 
-
 .search-form input::-webkit-input-placeholder {
     color:#000000;
 }
@@ -492,20 +507,6 @@ a {
 
 .search-form input:-ms-input-placeholder {
     color:#000000;
-}
-
-/*Исчезновение плейсхолдера при фокусе*/
-
-input[type=text]:focus::-webkit-input-placeholder {
-    opacity: 0;
-}
-
-input[type=text]:focus::-moz-placeholder {
-    opacity: 0;
-}
-
-input[type=text]:focus:-ms-input-placeholder {
-    opacity: 0;
 }
 
 .search-form .search-form-btn {
@@ -561,7 +562,7 @@ input[type=text]:focus:-ms-input-placeholder {
     margin: auto;
 }
 
-.footer-social {
+.main-footer .footer-social {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -570,6 +571,7 @@ input[type=text]:focus:-ms-input-placeholder {
 }
 
 .footer-social li {
+    position: relative;
     margin-left: 5px;
 }
 
@@ -582,29 +584,43 @@ input[type=text]:focus:-ms-input-placeholder {
     vertical-align: middle;
     width: 47px;
     height: 47px;
-    background-color: #81b3d2;
     outline: none;
 }
 
-.social-twitter-btn {
-    background: url(../img/social/twitter.svg) 15px 15px no-repeat;
+.footer-social .social-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
 }
 
-.social-facebook-btn {
-    background: url(../img/social/fb-icon.svg) 17px 13px no-repeat;
+.footer-social .social-twitter-btn::before {
+    top: 16px;
+    left: 15px;
+    width: 17px;
+    height: 15px;
+    background: url(../img/social/twitter.svg) 0 0 no-repeat;
 }
 
-.social-youtube-btn {
-    background: url(../img/social/youtube.svg) 14px 15px no-repeat;
+.footer-social .social-facebook-btn::before {
+    top: 12px;
+    left: 17px;
+    width: 12px;
+    height: 22px;
+    background: url(../img/social/fb-icon.svg) 0 0 no-repeat;
 }
 
-.social-btn:hover,
-.social-btn:focus {
-    background-color: #669ec0;
+.footer-social .social-youtube-btn::before {
+    top: 15px;
+    left: 13px;
+    width: 20px;
+    height: 16px;
+    background: url(../img/social/youtube.svg) 0 0 no-repeat;
 }
 
-.social-btn:active {
-    background-color: #5496bd;
+.social-btn:active::before {
+    opacity: 0.3;
 }
 
 .copyright-btn {
@@ -625,7 +641,7 @@ input[type=text]:focus:-ms-input-placeholder {
 }
 
 .copyright-btn:active path {
-    opacity: 0.3;
+    fill: #bdbbbc;
 }
 
 /*Стилизация внутренней страницы - отели*/
@@ -640,7 +656,6 @@ input[type=text]:focus:-ms-input-placeholder {
     flex-wrap: wrap;
     padding: 26px 6% 7px;
 }
-
 
 .filter fieldset {
     border: none;
@@ -676,7 +691,7 @@ input[type=text]:focus:-ms-input-placeholder {
     margin-left: 2px;
 }
 
-.filter-option {
+.filter-list .filter-option {
     margin-bottom: 25px;
 }
 
@@ -695,7 +710,6 @@ input[type=text]:focus:-ms-input-placeholder {
     width: 23px;
     height: 23px;
     background-image: url(../img/icon-checkbox-off.svg);
-
 }
 
 .filter-input:checked + label::after {
@@ -707,7 +721,14 @@ input[type=text]:focus:-ms-input-placeholder {
     width: 27px;
     height: 23px;
     background-image: url(../img/icon-checkbox-on.svg);
+}
 
+.filter-input:disabled + label,
+.filter-input:disabled + label::after {
+    opacity: 0.3;
+    cursor: default;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .price-value {
@@ -843,6 +864,7 @@ input[type=text]:focus:-ms-input-placeholder {
 }
 
 .hotels {
+    color: #000000;
     background-color: #ffffff;
 }
 
@@ -852,7 +874,6 @@ input[type=text]:focus:-ms-input-placeholder {
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
-    color: #000000;
     padding: 11px 6% 6px;
 }
 
@@ -862,7 +883,6 @@ input[type=text]:focus:-ms-input-placeholder {
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-    color: #000000;
     margin: 18px 47px 18px 0;
 }
 
@@ -893,7 +913,7 @@ input[type=text]:focus:-ms-input-placeholder {
     margin: 0;
 }
 
-.sorting-list .sorting-active a {
+.sorting-list-active a {
     color: #81b3d2;
     text-decoration: none;
 }
@@ -1016,29 +1036,12 @@ input[type=text]:focus:-ms-input-placeholder {
     padding: 3px 17px;
 }
 
+.hotel-info-buttons .btn:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .hotel-info-buttons .more-btn {
-    background-color: #81b3d2;
     margin-right: 5px;
-}
-
-.hotel-info-buttons .more-btn:hover,
-.hotel-info-buttons .more-btn:focus {
-    background-color: #669ec0;
-}
-
-
-.hotel-info-buttons .reservation-btn {
-    background-color: #766357;
-}
-
-.hotel-info-buttons .reservation-btn:hover,
-.hotel-info-buttons .reservation-btn:focus{
-    background-color: #604e43;
-}
-
-.hotel-info-buttons .more-btn:active,
-.hotel-info-buttons .reservation-btn:active {
-    opacity: 0.3;
 }
 
 .rating {
@@ -1069,7 +1072,3 @@ input[type=text]:focus:-ms-input-placeholder {
     background-color: #f2f2f2;
     padding: 3px 13px;
 }
-
-
-
-
