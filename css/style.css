@@ -982,7 +982,8 @@ input[type=text]:focus:-ms-input-placeholder {
     fill: #000000;
 }
 
-.arrow:active path:active {
+.arrow:active path,
+.arrow path:active {
     fill: #81b3d2;
 }
 
