@@ -644,12 +644,13 @@ input[type=text]:focus:-ms-input-placeholder {
     vertical-align: middle;
 }
 
-.copyright-btn:hover svg,
-.copyright-btn:focus svg {
+.copyright-btn:hover path,
+.copyright-btn:focus path {
     fill: #81b3d2;
 }
 
-.copyright-btn:active svg {
+.copyright-btn:active path,
+.copyright-btn:active path {
     fill: #000000;
     opacity: 0.3;
 }
@@ -968,20 +969,20 @@ input[type=text]:focus:-ms-input-placeholder {
     outline: none;
 }
 
-.arrow svg {
+.arrow path {
     fill: #cacaca;
 }
 
-.arrow-active svg {
+.arrow-active path {
     fill: #81b3d2;
 }
 
-.arrow:hover svg,
-.arrow:focus svg {
+.arrow:hover path,
+.arrow:focus path {
     fill: #000000;
 }
 
-.arrow:active svg {
+.arrow:hover:active path {
     fill: #81b3d2;
 }
 
