@@ -650,7 +650,7 @@ input[type=text]:focus:-ms-input-placeholder {
 }
 
 .copyright-btn:active path,
-.copyright-btn:active path {
+.academy-logo:active path {
     fill: #000000;
     opacity: 0.3;
 }
