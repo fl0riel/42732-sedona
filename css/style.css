@@ -439,8 +439,8 @@ input[type=text]:focus:-ms-input-placeholder {
 
 .search-form-visible input[type=text]:focus {
     background-color: #ffffff;
-    outline: none;
     box-shadow: inset 0 0 0 1px #e5e5e5;
+    outline: none;
 }
 
 .search-form-item .calendar {
@@ -728,8 +728,7 @@ input[type=text]:focus:-ms-input-placeholder {
     cursor: pointer;
 }
 
-.filter-input + label::after {
-    content: "";
+.filter-input + .checkbox-indicator {
     position: absolute;
     top: -2px;
     left: 0;
@@ -739,19 +738,17 @@ input[type=text]:focus:-ms-input-placeholder {
     background-image: url(../img/icon-checkbox-off.svg);
 }
 
-.filter-input:checked + label::after {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: 0;
-    display: block;
+.filter-input:focus + .checkbox-indicator {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.filter-input:checked + .checkbox-indicator {
     width: 27px;
-    height: 23px;
     background-image: url(../img/icon-checkbox-on.svg);
 }
 
-.filter-input:disabled + label,
-.filter-input:disabled + label::after {
+.filter-input:disabled + .checkbox-indicator {
     opacity: 0.3;
     cursor: default;
     -moz-user-select: none;
@@ -818,7 +815,8 @@ input[type=text]:focus:-ms-input-placeholder {
 }
 
 .price-value input[type=text]:focus {
-    outline: none;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
 }
 
 .price-value input::-webkit-input-placeholder {
@@ -943,11 +941,11 @@ input[type=text]:focus:-ms-input-placeholder {
 
 .sorting-list-item a,
 .sorting-list-active a{
-    outline: none;
     color: rgba(0, 0, 0, 0.3);
     text-decoration: underline;
     text-decoration-color: #81b3d2;
     text-decoration-style: dotted;
+    outline: none;
 }
 
 .sorting-list-active a {
@@ -982,7 +980,8 @@ input[type=text]:focus:-ms-input-placeholder {
     margin-left: 12px;
 }
 
-.arrow-item .arrow {
+.arrow-item .arrow,
+.arrow-active .arrow{
     outline: none;
 }
 
