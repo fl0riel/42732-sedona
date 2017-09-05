@@ -286,7 +286,7 @@ input[type=text]:focus:-ms-input-placeholder {
 
 .features-list .feature-item {
     position: relative;
-    max-width: 33.33%;
+    width: 33.33%;
     padding: 137px 50px 50px 50px;
 }
 
@@ -300,19 +300,19 @@ input[type=text]:focus:-ms-input-placeholder {
     height: 72px;
 }
 
-.feature-item:nth-of-type(1)::before {
+.feature-item-house::before {
     top: 61px;
     left: 162px;
     background: url("../img/icon-1.svg") 0 0 no-repeat;
 }
 
-.feature-item:nth-of-type(2)::before {
+.feature-item-food::before {
     top: 62px;
     left: 158px;
     background: url("../img/icon-2.svg") 0 0 no-repeat;
 }
 
-.feature-item:nth-of-type(3)::before {
+.feature-item-souvenir::before {
     width: 64px;
     height: 76px;
     top: 57px;
