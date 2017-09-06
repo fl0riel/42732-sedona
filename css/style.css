@@ -385,10 +385,6 @@ input[type=text]:focus:-ms-input-placeholder {
     margin: 0 auto;
 }
 
-.search-form-hidden {
-    display: none;
-}
-
 .search-form-visible {
     display: flex;
     flex-direction: column;
@@ -404,6 +400,10 @@ input[type=text]:focus:-ms-input-placeholder {
     padding: 55px;
     box-shadow: 0 0 15px 2px rgba(0,0,0,0.2);
     overflow: auto;
+}
+
+.search-form-hidden {
+    display: none;
 }
 
 .search-form-visible label {
