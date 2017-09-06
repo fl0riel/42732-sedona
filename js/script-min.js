@@ -1,1 +1,1 @@
-var searchBtn=document.querySelector(".search-btn"),searchForm=document.querySelector(".search-form-visible");searchForm.classList.add("search-form-hidden"),searchBtn.addEventListener("click",function(e){e.preventDefault(),searchForm.classList.toggle("search-form-hidden")});
+var searchBtn=document.querySelector(".search-btn"),searchForm=document.querySelector(".search-form-visible");searchBtn.addEventListener("click",function(e){e.preventDefault(),searchForm.classList.toggle("search-form-hidden")});
