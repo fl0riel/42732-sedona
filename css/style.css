@@ -123,19 +123,6 @@ a {
     background-color: #503e33;
 }
 
-/*Исчезновение плейсхолдера при фокусе*/
-input[type=text]:focus::-webkit-input-placeholder {
-    opacity: 0;
-}
-
-input[type=text]:focus::-moz-placeholder {
-    opacity: 0;
-}
-
-input[type=text]:focus:-ms-input-placeholder {
-    opacity: 0;
-}
-
 /*Стилизация главной страницы*/
 .main-navigation {
     position: relative;
@@ -325,12 +312,18 @@ input[type=text]:focus:-ms-input-placeholder {
 }
 
 .reason-info-white .reason-photo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    align-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     max-width: 800px;
     max-height: 256px;
     width: 66.66%;
+    padding-bottom: 10px;
     overflow: hidden;
 }
 
@@ -523,7 +516,7 @@ input[type=text]:focus:-ms-input-placeholder {
 .search-form-visible input[type=text]:focus {
     background-color: #ffffff;
     -webkit-box-shadow: inset 0 0 0 1px #e5e5e5;
-            box-shadow: inset 0 0 0 1px #e5e5e5;
+    box-shadow: inset 0 0 0 1px #e5e5e5;
     outline: none;
 }
 
@@ -616,6 +609,18 @@ input[type=text]:focus:-ms-input-placeholder {
 .search-form-visible .search-form-btn {
     padding: 16px;
     margin-top: 24px;
+}
+
+.search-form-visible input[type=text]:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.search-form-visible input[type=text]:focus::-moz-placeholder {
+    opacity: 0;
+}
+
+.search-form-visible input[type=text]:focus:-ms-input-placeholder {
+    opacity: 0;
 }
 
 .map {
@@ -1015,6 +1020,18 @@ input[type=text]:focus:-ms-input-placeholder {
     background-color: #ffffff;
 }
 
+.filter input[type=text]:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.filter input[type=text]:focus::-moz-placeholder {
+    opacity: 0;
+}
+
+.filter input[type=text]:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+
 .hotels {
     color: #000000;
     background-color: #ffffff;
@@ -1246,7 +1263,8 @@ input[type=text]:focus:-ms-input-placeholder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0 0 46px 0;
